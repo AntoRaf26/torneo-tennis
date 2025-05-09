@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Torneo Tennis</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <h1>Torneo Tennis Club</h1>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+    <nav id="nav-links">
+      <a href="index.html" class="active">Dashboard</a>
+      <a href="players.html">Giocatori</a>
+      <a href="finals.html">Fasi Finali</a>
+    </nav>
+  </header>
+
+  <main class="dashboard">
+    <h2>Partite di oggi</h2>
+
+    <form id="add-match-form" class="add-match-form">
+      <select id="player1" required></select>
+      <select id="player2" required></select>
+      <select id="campo" required>
+        <option value="Campo Centrale">Campo Centrale</option>
+        <option value="Campo 2">Campo 2</option>
+        <option value="Campo 3">Campo 3</option>
+      </select>
+      <input type="time" id="ora" required>
+      <button type="submit">➕ Aggiungi partita</button>
+    </form>
+
+    <div id="matches-container"></div>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    document.getElementById("hamburger").addEventListener("click", function () {
+      document.getElementById("nav-links").classList.toggle("active");
+    });
+  </script>
+</body>
+</html>

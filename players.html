@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestione Giocatori</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Torneo Tennis Club</h1>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+    <nav id="nav-links">
+      <a href="index.html">Dashboard</a>
+      <a href="players.html" class="active">Giocatori</a>
+      <a href="finals.html">Fasi Finali</a>
+    </nav>
+  </header>
+
+  <main class="players-section">
+    <h2>Giocatori</h2>
+
+    <form id="add-player-form" class="add-match-form">
+      <input type="text" id="new-player-name" placeholder="Nome giocatore" required />
+      <button type="submit">➕ Aggiungi</button>
+    </form>
+
+    <div id="players-list"></div>
+
+    <h2>Classifica Visuale</h2>
+    <canvas id="chart-classifica" width="400" height="300"></canvas>
+  </main>
+
+  <script src="players.js"></script>
+  <script>
+    document.getElementById("hamburger").addEventListener("click", function () {
+      document.getElementById("nav-links").classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
