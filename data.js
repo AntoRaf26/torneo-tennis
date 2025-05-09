@@ -1,5 +1,11 @@
-// Dati iniziali per la prima apertura. Dopo verranno sovrascritti da localStorage.
 
-let matchesToday = JSON.parse(localStorage.getItem("matches")) || [];
+if (!localStorage.getItem("players")) {
+  localStorage.setItem("players", JSON.stringify([
+    { name: "Federico", games: 0 },
+    { name: "Luca", games: 0 }
+  ]));
+}
 
-let players = JSON.parse(localStorage.getItem("players")) || [];
+if (!localStorage.getItem("matches")) {
+  localStorage.setItem("matches", JSON.stringify([]));
+}

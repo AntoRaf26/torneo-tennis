@@ -9,18 +9,15 @@
 </head>
 <body>
   <header>
-    <h1>Torneo Tennis Club</h1>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
-    <nav id="nav-links">
+    <h1>Campionato Tennis Primavera/Estate 2025</h1>
+    <nav>
       <a href="index.html" class="active">Dashboard</a>
       <a href="players.html">Giocatori</a>
       <a href="finals.html">Fasi Finali</a>
     </nav>
   </header>
-
   <main class="dashboard">
-    <h2>Partite di oggi</h2>
-
+    <h2>Partite del torneo</h2>
     <form id="add-match-form" class="add-match-form">
       <select id="player1" required></select>
       <select id="player2" required></select>
@@ -29,19 +26,13 @@
         <option value="Campo 2">Campo 2</option>
         <option value="Campo 3">Campo 3</option>
       </select>
+      <input type="date" id="data" required>
       <input type="time" id="ora" required>
       <button type="submit">➕ Aggiungi partita</button>
     </form>
-
     <div id="matches-container"></div>
   </main>
-
   <script src="data.js"></script>
   <script src="app.js"></script>
-  <script>
-    document.getElementById("hamburger").addEventListener("click", function () {
-      document.getElementById("nav-links").classList.toggle("active");
-    });
-  </script>
 </body>
 </html>

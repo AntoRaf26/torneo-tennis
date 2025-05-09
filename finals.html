@@ -9,20 +9,24 @@
 <body>
   <header>
     <h1>Torneo Tennis Club</h1>
-    <nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+    <nav id="nav-links">
       <a href="index.html">Dashboard</a>
       <a href="players.html">Giocatori</a>
       <a href="finals.html" class="active">Fasi Finali</a>
     </nav>
   </header>
-
   <main class="players-section">
     <h2>Fasi Finali</h2>
     <div id="semifinali"></div>
     <div id="finale" style="margin-top:2rem;"></div>
     <div id="vincitore" style="margin-top:2rem;"></div>
   </main>
-
   <script src="finals.js"></script>
+  <script>
+    document.getElementById("hamburger").addEventListener("click", function () {
+      document.getElementById("nav-links").classList.toggle("active");
+    });
+  </script>
 </body>
 </html>

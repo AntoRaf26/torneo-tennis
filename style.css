@@ -1,3 +1,4 @@
+
 :root {
   --main-color: #0074e4;
   --accent-color: #00c896;
@@ -35,7 +36,7 @@ nav a.active {
   border-bottom: 2px solid white;
 }
 
-main.dashboard {
+main {
   padding: 2rem;
 }
 
@@ -87,15 +88,6 @@ button {
   margin: 0.2rem;
 }
 
-/* Hamburger menu responsive */
-header {
-  position: relative;
-  flex-wrap: wrap;
-}
-nav {
-  display: flex;
-  gap: 1rem;
-}
 .hamburger {
   display: none;
   font-size: 1.5rem;
